@@ -29,13 +29,11 @@ class MovieTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-//    func getSectionNumber(sectionNum : Int, rowNum : Int) {
-//        sectionNumber = sectionNum - 1
-//        sectionNumber = rowNum - 1
-//    }
+    
     func getSectionNumber(number : Int) {
         sectionNumber = number - 1
     }
+    
     func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self

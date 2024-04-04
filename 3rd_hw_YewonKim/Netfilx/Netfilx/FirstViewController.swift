@@ -4,7 +4,8 @@
 //
 //  Created by yewoni on 3/30/24.
 //
-// 질문 : tapbar색상, collectionView 스크롤, MockData indexpath.section이 안바뀜
+// TO-DO : MovieTableViewCell부분 - indexPath 활용을 이 Controller에서 할 수 있도록 수정할 것
+// 반복문으로 여러번 CollectionView를 만들어야 함!
 import UIKit
 
 
@@ -147,6 +148,6 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-//let tableViewCell = MovieTableViewCell()
+//let movieCell = MovieTableViewCell()
 //
-//tableViewCell.collectionView.delegate = self
+//movieCell.collectionView.delegate = self
