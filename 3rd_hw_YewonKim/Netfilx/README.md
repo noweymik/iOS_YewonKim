@@ -11,4 +11,7 @@
 <br>
 <img src="https://github.com/3rd-PARD-iOS-PART/iOS_YewonKim/blob/main/3rd_hw_YewonKim/Netfilx/Netfilx/README_img/home2.png?raw=true" width="300"/>
 
-### 3. 
+### 3. 다른 페이지
+- Tapbar의 다른 버튼을 누르면 해당 페이지로 이동합니다.
+<img src="https://github.com/3rd-PARD-iOS-PART/iOS_YewonKim/blob/main/3rd_hw_YewonKim/Netfilx/Netfilx/README_img/ComingSoon.png?raw=true" width="300"/>
+
