@@ -28,6 +28,7 @@ extension MockData{
             MockData(title: "Trending Now", name: "movie8"),
             MockData(title: "Trending Now", name: "movie9"),
             MockData(title: "Trending Now", name: "movie10"),
+            MockData(title: "Trending Now", name: "movie36"),
         ],
         [
             MockData(title: "Top 10 in Nigeria Today", name: "movie11"),
@@ -35,6 +36,7 @@ extension MockData{
             MockData(title: "Top 10 in Nigeria Today", name: "movie13"),
             MockData(title: "Top 10 in Nigeria Today", name: "movie14"),
             MockData(title: "Top 10 in Nigeria Today", name: "movie15"),
+            MockData(title: "Top 10 in Nigeria Today", name: "movie35"),
         ],
         [
             MockData(title: "My List", name: "movie16"),

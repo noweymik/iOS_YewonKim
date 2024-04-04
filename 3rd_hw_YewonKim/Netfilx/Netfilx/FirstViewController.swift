@@ -80,7 +80,9 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as? MovieTableViewCell else {
                 return UITableViewCell()
             }
-            
+//            for i in 0..<indexPath.section {
+//                cell.getSectionNumber(sectionNum: indexPath.section, rowNum: indexPath.row)
+//            }
             switch indexPath.section {
             case 0 :
                 cell.getSectionNumber(number: indexPath.section)
@@ -144,3 +146,7 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
+
+//let tableViewCell = MovieTableViewCell()
+//
+//tableViewCell.collectionView.delegate = self

@@ -9,11 +9,12 @@ import UIKit
 
 class MovieTableViewCell: UITableViewCell {
     private var sectionNumber : Int?
+    
     let collectionView : UICollectionView = {
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection = .horizontal
-        flowLayout.minimumInteritemSpacing = 10
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = 10
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "MovieCollectionViewCell")
         collectionView.backgroundColor = .black
@@ -28,6 +29,10 @@ class MovieTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+//    func getSectionNumber(sectionNum : Int, rowNum : Int) {
+//        sectionNumber = sectionNum - 1
+//        sectionNumber = rowNum - 1
+//    }
     func getSectionNumber(number : Int) {
         sectionNumber = number - 1
     }
@@ -35,12 +40,12 @@ class MovieTableViewCell: UITableViewCell {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        addSubview(collectionView)
+        contentView.addSubview(collectionView)
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: topAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            collectionView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
 }
@@ -52,13 +57,9 @@ extension MovieTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath)
-//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as? CollectioViewCell else {
-//            return UICollectionViewCell()
-//        }
-        
+
         let imageName = MockData.modeling[sectionNumber ?? 0][indexPath.row].name
-//        cell.configure(name: imageName)
-//        let imageName = MockData.modeling[0][indexPath.row].name
+//        let imageName = MockData.modeling[indexPath.section][indexPath.row].name
         let imageView = UIImageView(image: UIImage(named: imageName))
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
@@ -83,37 +84,3 @@ extension MovieTableViewCell: UICollectionViewDelegateFlowLayout {
         return CGSize(width: 100, height: collectionView.bounds.height)
     }    
 }
-
-
-//class CollectioViewCell : UICollectionViewCell {
-//    private let imageView : UIImageView = {
-//        let image = UIImageView()
-//        image.translatesAutoresizingMaskIntoConstraints = false
-//        return image
-//    }()
-//    
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        setupUI()
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        super.init(coder: coder)
-//    }
-//    
-//    func setupUI() {
-//        contentView.addSubview(imageView)
-//        NSLayoutConstraint.activate([
-//            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-//            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-//            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-//            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-//            
-//        ])
-//    }
-//    
-//    func configure(name : String) {
-//        imageView.image = UIImage(named: name)
-//    }
-//    
-//}
