@@ -5,6 +5,7 @@
 //  Created by yewoni on 4/14/24.
 //
 
+// MARK: TODO - custom tabBar 만들기
 import UIKit
 
 class SearchDetailTableViewCell: UITableViewCell {
@@ -188,7 +189,7 @@ class SearchDetailTableViewCell: UITableViewCell {
     let myList_button: UIButton = {
         var config = UIButton.Configuration.filled()
         config.background.backgroundColor = .clear
-        if let image = UIImage(named: "Add") {
+        if let image = UIImage(named: "add_icon") {
             let size = CGSize(width: 30, height: 30)
             UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
             image.draw(in: CGRect(origin: .zero, size: size))

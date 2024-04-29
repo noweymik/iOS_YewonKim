@@ -82,7 +82,7 @@ class HomeTableViewCell: UITableViewCell {
     let myList_button: UIButton = {
         var config = UIButton.Configuration.filled()
         config.background.backgroundColor = .clear
-        config.image = UIImage(named: "Add")
+        config.image = UIImage(named: "add_icon")
         config.imagePlacement = .top
         config.baseForegroundColor = .white
         
