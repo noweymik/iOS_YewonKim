@@ -366,7 +366,7 @@ class SearchDetailTableViewCell: UITableViewCell {
             play_button.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
             play_button.heightAnchor.constraint(equalToConstant: 40),
             
-            download_button.topAnchor.constraint(equalTo: play_button.bottomAnchor, constant: 5),
+            download_button.topAnchor.constraint(equalTo: play_button.bottomAnchor, constant: 8),
             download_button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
             download_button.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
             download_button.heightAnchor.constraint(equalToConstant: 40),
