@@ -384,7 +384,7 @@ class SearchDetailTableViewCell: UITableViewCell {
             share_button.topAnchor.constraint(equalTo: description_label.bottomAnchor, constant: 30),
             share_button.leadingAnchor.constraint(equalTo: rate_button.trailingAnchor, constant: 60),
             
-            tabbar_image.topAnchor.constraint(equalTo: myList_button.bottomAnchor, constant: 30),
+            tabbar_image.topAnchor.constraint(equalTo: myList_button.bottomAnchor, constant: 20),
             tabbar_image.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             tabbar_image.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -35),            
         ])
