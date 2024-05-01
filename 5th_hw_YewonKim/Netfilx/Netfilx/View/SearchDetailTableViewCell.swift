@@ -266,6 +266,15 @@ class SearchDetailTableViewCell: UITableViewCell {
         return button
     }()
     
+    // tab bar image
+    let tabbar_image: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "tabBar")
+        image.contentMode = .scaleAspectFit
+        return image
+    }()
+    
     func setUI() {
         // contentView에 모두 추가하기
         contentView.addSubview(movie_image)
@@ -287,6 +296,8 @@ class SearchDetailTableViewCell: UITableViewCell {
         contentView.addSubview(rate_button)
         contentView.addSubview(share_button)
                 
+        contentView.addSubview(tabbar_image)
+        
         movie_image.translatesAutoresizingMaskIntoConstraints = false
         close_button.translatesAutoresizingMaskIntoConstraints = false
         mirror_button.translatesAutoresizingMaskIntoConstraints = false
@@ -303,6 +314,7 @@ class SearchDetailTableViewCell: UITableViewCell {
         myList_button.translatesAutoresizingMaskIntoConstraints = false
         rate_button.translatesAutoresizingMaskIntoConstraints = false
         share_button.translatesAutoresizingMaskIntoConstraints = false
+        tabbar_image.translatesAutoresizingMaskIntoConstraints = false
         
         // Constraints 설정
         NSLayoutConstraint.activate([
@@ -371,6 +383,10 @@ class SearchDetailTableViewCell: UITableViewCell {
             
             share_button.topAnchor.constraint(equalTo: description_label.bottomAnchor, constant: 30),
             share_button.leadingAnchor.constraint(equalTo: rate_button.trailingAnchor, constant: 60),
+            
+            tabbar_image.topAnchor.constraint(equalTo: myList_button.bottomAnchor, constant: 30),
+            tabbar_image.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            tabbar_image.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -35),            
         ])
         
     }

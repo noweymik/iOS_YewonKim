@@ -130,7 +130,7 @@ extension SearchDetailModalController: UITableViewDelegate, UITableViewDataSourc
     // cell 높이 설정
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 600.0
+            return 660.0
         }
         return 150.0
     }
